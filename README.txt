@@ -1,0 +1,1 @@
+It's a exercise from a "AI Base" subject from my university.
