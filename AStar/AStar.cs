@@ -1,37 +1,51 @@
 ﻿using System.Numerics;
+using System.Xml.Linq;
 
 class AStar
 {
     private class NodeMatran
     {
-        public List<NodeLink> beforeNodes;
-        public NodeMatran afterNodes;
+        public List<Link> links;
         public int estimateCost;
         public int trueCost;
         public PosInArray posInArray;
 
-        public NodeMatran(List<NodeLink> beforeNodes, NodeMatran afterNodes, int estimateCost, int trueCost, PosInArray posInArray)
+        public NodeMatran(List<Link> afterNodes, int estimateCost, int trueCost, PosInArray posInArray)
         {
-            this.beforeNodes = beforeNodes;
-            this.afterNodes = afterNodes;
+            this.links = afterNodes;
             this.estimateCost = estimateCost;
             this.trueCost = trueCost;
             this.posInArray = posInArray;
         }       
     }
-    private struct NodeLink
+
+    private class PosInArray
+    {
+        public int column;
+        public int row;
+
+        public PosInArray(int column, int row)
+        {
+            this.column = column;
+            this.row = row;
+        }
+    }
+
+    private class Link
     {
         public NodeMatran nodeMaTran;
         public int weight;
+
+        public Link(NodeMatran nodeMatran, int weight)
+        {
+            this.nodeMaTran = nodeMatran;
+            this.weight = weight;
+        }
     }
 
-    private struct PosInArray
-    {
-        public int row;
-        public int column;
-    }
-
-    private NodeMatran firstNodeMaTran;
+    private PosInArray _startPos;
+    private PosInArray _endPos;
+    private NodeMatran[,] _matrix;
 
     private PriorityQueue<NodeMatran, int> _openList = new PriorityQueue<NodeMatran, int>();
     private List<NodeMatran> _closedList = new List<NodeMatran>();
@@ -41,19 +55,9 @@ class AStar
 
     private AStar(NodeMatran[,] matrix, PosInArray startPos, PosInArray endPos)
     {
-        InitTargetMatrix();
-        firstNodeMaTran = InitFirstNodeMaTran(matrix);
-    }
-
-    private void InitTargetMatrix()
-    {
-        int[,] temp ={
-            { 1, 2, 3 },
-            { 8, 0, 4 },
-            { 7, 6, 5 }
-        };
-
-        targetMatrix = temp;
+        _matrix = matrix;
+        _startPos = startPos;
+        _endPos = endPos;
     }
 
     private NodeMatran InitFirstNodeMaTran(int[,] firstMatrix)
@@ -136,7 +140,7 @@ class AStar
     {
         foreach (NodeMatran nodeMaTran in _closedList)
         {
-            if (//MatrixCompare(nodeToCheck.matrix, nodeMaTran.matrix))
+            if (nodeToCheck.posInArray.Equals(nodeMaTran.posInArray))
             {
                 return true;
             }
@@ -163,7 +167,7 @@ class AStar
 
     private void PrintAction()
     {
-        Travelled(firstNodeMaTran);
+        Travelled(_startNodeMatran);
 
         GetRightWay(_closedList.Last());
 
@@ -190,11 +194,74 @@ class AStar
 
         GetRightWay(nodeMaTran.parentNode);
     }
+
     private static NodeMatran[,] SetupMatrixData()
     {
-        NodeMatran[,] matrix = new NodeMatran[3, 3];
+        List<Link> links = new List<Link>();
+        int estimateCost = -1;
+        int trueCose = -1;
+        PosInArray pos;
 
+        pos = new PosInArray(0, 0);
+        NodeMatran node0_0 = new NodeMatran(links, estimateCost, trueCose, pos);
 
+        pos = new PosInArray(0, 1);
+        NodeMatran node0_1 = new NodeMatran(links, estimateCost, trueCose, pos);
+
+        pos = new PosInArray(0, 2);
+        NodeMatran node0_2 = new NodeMatran(links, estimateCost, trueCose, pos);
+
+        pos = new PosInArray(1, 0);
+        NodeMatran node1_0 = new NodeMatran(links, estimateCost, trueCose, pos);
+
+        pos = new PosInArray(1, 1);
+        NodeMatran node1_1 = new NodeMatran(links, estimateCost, trueCose, pos);
+
+        pos = new PosInArray(1, 2);
+        NodeMatran node1_2 = new NodeMatran(links, estimateCost, trueCose, pos);
+
+        pos = new PosInArray(2, 0);
+        NodeMatran node2_0 = new NodeMatran(links, estimateCost, trueCose, pos);
+
+        pos = new PosInArray(2, 1);
+        NodeMatran node2_1 = new NodeMatran(links, estimateCost, trueCose, pos);
+
+        pos = new PosInArray(2, 2);
+        NodeMatran node2_2 = new NodeMatran(links, estimateCost, trueCose, pos);
+
+        node0_0.links.Add(new Link(node0_1, 2));
+        node0_0.links.Add(new Link(node1_0, 5));
+
+        node0_1.links.Add(new Link(node0_0, 2));
+        node0_1.links.Add(new Link(node0_2, 2));
+
+        node0_2.links.Add(new Link(node0_1, 2));
+        node0_2.links.Add(new Link(node1_2, 1));
+
+        node1_0.links.Add(new Link(node0_0, 5));
+        node1_0.links.Add(new Link(node1_1, 3));
+        node1_0.links.Add(new Link(node2_0, 1));
+
+        node1_1.links.Add(new Link(node1_0, 3));
+        node1_1.links.Add(new Link(node1_2, 1));
+        node1_1.links.Add(new Link(node2_1, 3));
+
+        node1_2.links.Add(new Link(node0_2, 1));
+        node1_2.links.Add(new Link(node1_1, 1));
+
+        node2_0.links.Add(new Link(node1_0, 1));
+
+        node2_1.links.Add(new Link(node1_1, 3));
+        node2_1.links.Add(new Link(node2_2, 1));
+
+        node2_2.links.Add(new Link(node2_1, 1));
+
+        NodeMatran[,] matrix =
+        {
+            {node0_0, node1_0, node2_0 },
+            {node0_1, node1_1, node2_1 },
+            {node0_2, node1_2, node2_2 },
+        };
 
         return matrix;
     }
@@ -203,13 +270,8 @@ class AStar
     {
         NodeMatran[,] matrix = SetupMatrixData();       
 
-        PosInArray startPos;
-        startPos.row = 0;
-        startPos.column = 0;
-
-        PosInArray endPos;
-        endPos.row = 2;
-        endPos.column = 2;
+        PosInArray startPos = new PosInArray(0,0);
+        PosInArray endPos = new PosInArray(2,2);
 
         AStar thn = new AStar(matrix, startPos, endPos);
         thn.PrintAction();
