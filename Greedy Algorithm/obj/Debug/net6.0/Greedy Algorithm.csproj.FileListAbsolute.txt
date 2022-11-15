@@ -1,0 +1,15 @@
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\bin\Debug\net6.0\Greedy Algorithm.exe
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\bin\Debug\net6.0\Greedy Algorithm.deps.json
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\bin\Debug\net6.0\Greedy Algorithm.runtimeconfig.json
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\bin\Debug\net6.0\Greedy Algorithm.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\bin\Debug\net6.0\Greedy Algorithm.pdb
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\obj\Debug\net6.0\Greedy Algorithm.csproj.AssemblyReference.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\obj\Debug\net6.0\Greedy Algorithm.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\obj\Debug\net6.0\Greedy Algorithm.AssemblyInfoInputs.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\obj\Debug\net6.0\Greedy Algorithm.AssemblyInfo.cs
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\obj\Debug\net6.0\Greedy Algorithm.csproj.CoreCompileInputs.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\obj\Debug\net6.0\Greedy Algorithm.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\obj\Debug\net6.0\refint\Greedy Algorithm.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\obj\Debug\net6.0\Greedy Algorithm.pdb
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\obj\Debug\net6.0\Greedy Algorithm.genruntimeconfig.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\Greedy Algorithm\obj\Debug\net6.0\ref\Greedy Algorithm.dll

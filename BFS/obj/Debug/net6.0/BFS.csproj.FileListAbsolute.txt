@@ -1,0 +1,15 @@
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\bin\Debug\net6.0\BFS.exe
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\bin\Debug\net6.0\BFS.deps.json
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\bin\Debug\net6.0\BFS.runtimeconfig.json
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\bin\Debug\net6.0\BFS.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\bin\Debug\net6.0\BFS.pdb
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\BFS.csproj.AssemblyReference.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\BFS.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\BFS.AssemblyInfoInputs.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\BFS.AssemblyInfo.cs
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\BFS.csproj.CoreCompileInputs.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\BFS.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\refint\BFS.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\BFS.pdb
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\BFS.genruntimeconfig.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\ref\BFS.dll

@@ -1,0 +1,15 @@
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\bin\Debug\net6.0\ThapHaNoiAKT.exe
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\bin\Debug\net6.0\ThapHaNoiAKT.deps.json
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\bin\Debug\net6.0\ThapHaNoiAKT.runtimeconfig.json
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\bin\Debug\net6.0\ThapHaNoiAKT.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\bin\Debug\net6.0\ThapHaNoiAKT.pdb
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.csproj.AssemblyReference.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.AssemblyInfoInputs.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.AssemblyInfo.cs
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.csproj.CoreCompileInputs.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\refint\ThapHaNoiAKT.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.pdb
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.genruntimeconfig.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\ref\ThapHaNoiAKT.dll

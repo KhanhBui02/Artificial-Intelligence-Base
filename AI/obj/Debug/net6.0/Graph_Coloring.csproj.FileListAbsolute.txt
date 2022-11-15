@@ -1,0 +1,15 @@
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\bin\Debug\net6.0\Graph_Coloring.exe
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\bin\Debug\net6.0\Graph_Coloring.deps.json
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\bin\Debug\net6.0\Graph_Coloring.runtimeconfig.json
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\bin\Debug\net6.0\Graph_Coloring.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\bin\Debug\net6.0\Graph_Coloring.pdb
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\Graph_Coloring.csproj.AssemblyReference.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\Graph_Coloring.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\Graph_Coloring.AssemblyInfoInputs.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\Graph_Coloring.AssemblyInfo.cs
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\Graph_Coloring.csproj.CoreCompileInputs.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\Graph_Coloring.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\refint\Graph_Coloring.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\Graph_Coloring.pdb
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\Graph_Coloring.genruntimeconfig.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\ref\Graph_Coloring.dll
