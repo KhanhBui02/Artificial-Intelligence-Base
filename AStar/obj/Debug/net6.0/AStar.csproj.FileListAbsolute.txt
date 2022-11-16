@@ -1,0 +1,15 @@
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\bin\Debug\net6.0\AStar.exe
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\bin\Debug\net6.0\AStar.deps.json
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\bin\Debug\net6.0\AStar.runtimeconfig.json
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\bin\Debug\net6.0\AStar.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\bin\Debug\net6.0\AStar.pdb
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\obj\Debug\net6.0\AStar.csproj.AssemblyReference.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\obj\Debug\net6.0\AStar.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\obj\Debug\net6.0\AStar.AssemblyInfoInputs.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\obj\Debug\net6.0\AStar.AssemblyInfo.cs
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\obj\Debug\net6.0\AStar.csproj.CoreCompileInputs.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\obj\Debug\net6.0\AStar.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\obj\Debug\net6.0\refint\AStar.dll
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\obj\Debug\net6.0\AStar.pdb
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\obj\Debug\net6.0\AStar.genruntimeconfig.cache
+D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AStar\obj\Debug\net6.0\ref\AStar.dll

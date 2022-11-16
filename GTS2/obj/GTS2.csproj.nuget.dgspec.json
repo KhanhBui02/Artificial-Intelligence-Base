@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\GTS2\\GTS2.csproj": {}
+    "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\GTS2\\GTS2.csproj": {}
   },
   "projects": {
-    "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\GTS2\\GTS2.csproj": {
+    "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\GTS2\\GTS2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\GTS2\\GTS2.csproj",
+        "projectUniqueName": "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\GTS2\\GTS2.csproj",
         "projectName": "GTS2",
-        "projectPath": "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\GTS2\\GTS2.csproj",
-        "packagesPath": "C:\\Users\\khanh.buidoanbuu\\.nuget\\packages\\",
-        "outputPath": "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\GTS2\\obj\\",
+        "projectPath": "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\GTS2\\GTS2.csproj",
+        "packagesPath": "C:\\Users\\BuuKhanh\\.nuget\\packages\\",
+        "outputPath": "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\GTS2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\khanh.buidoanbuu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BuuKhanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,7 +45,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -54,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

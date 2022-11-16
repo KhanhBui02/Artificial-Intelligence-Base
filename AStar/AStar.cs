@@ -3,39 +3,43 @@ using System.Xml.Linq;
 
 class AStar
 {
-    private class NodeMatran
-    {
-        public List<Link> links;
-        public int estimateCost;
-        public PosInArray posInArray;
-
-        public NodeMatran(List<Link> afterNodes, int estimateCost, PosInArray posInArray)
-        {
-            this.links = afterNodes;
-            this.estimateCost = estimateCost;
-            this.posInArray = posInArray;
-        }       
-    }
-
     private class NodeAstar
     {
+        public List<Link> links;
         public NodeAstar parentNode;
         public PosInArray posInArray;
+        public int estimateCost;
         public int d;
         public int f;
-        public string action;
 
-        public NodeAstar(NodeAstar parentNode, PosInArray posInArray, int d, int f, string action)
+        public NodeAstar(List<Link> afterNodes, NodeAstar parentNode, PosInArray posInArray, int estimateCost, int d, int f)
         {
+            this.links = afterNodes;
             this.parentNode = parentNode;
             this.posInArray = posInArray;
+            this.estimateCost = estimateCost;
             this.d = d;
             this.f = f;
-            this.action = action;
         }
+
+        public NodeAstar(List<Link> afterNodes)
+        {
+            this.links = afterNodes;
+            posInArray = new PosInArray();
+            parentNode = new NodeAstar();
+            estimateCost = 0;
+            d = 0;
+            f = 0;
+        }
+
         public NodeAstar()
         {
-
+            this.links = new List<Link>();
+            parentNode = new NodeAstar();
+            posInArray = new PosInArray(-1, -1);
+            estimateCost = 0;
+            d = 0;
+            f = 0;
         }
     }
 
@@ -49,117 +53,107 @@ class AStar
             this.column = column;
             this.row = row;
         }
+
+        public PosInArray()
+        {
+            column = -1;
+            row = -1;
+        }
+
+        public int TotalBySubWithAbs(PosInArray otherPos)
+        {
+            return Math.Abs(column - otherPos.column) + Math.Abs(row - otherPos.row);
+        }
     }
 
     private class Link
     {
-        public NodeMatran nodeMaTran;
+        public NodeAstar nodeAstar;
         public int weight;
 
-        public Link(NodeMatran nodeMatran, int weight)
+        public Link(NodeAstar nodeAstar, int weight)
         {
-            this.nodeMaTran = nodeMatran;
+            this.nodeAstar = nodeAstar;
             this.weight = weight;
         }
     }
 
-    private PosInArray _startPos;
-    private PosInArray _endPos;
     private NodeAstar _startNodeAstar;
     private NodeAstar _endNodeAstar;
-    private NodeMatran[,] _matrix;
+    private NodeAstar[,] _matrix;
 
     private PriorityQueue<NodeAstar, int> _openList = new PriorityQueue<NodeAstar, int>();
     private List<NodeAstar> _closedList = new List<NodeAstar>();
     private LinkedList<NodeAstar> rightWay = new LinkedList<NodeAstar>();
 
-    private AStar(NodeMatran[,] matrix, PosInArray startPos, PosInArray endPos)
+    private AStar(NodeAstar[,] matrix, PosInArray startPos, PosInArray endPos)
     {
-        NodeAstar parentStart = new NodeAstar();
-        int dStart = 0;
-        int fStart = matrix[startPos.column, startPos.row].estimateCost;
-        string actionStart = "";
-        _startNodeAstar = new NodeAstar(parentStart, startPos, dStart, fStart, actionStart);
-
-        NodeAstar parentEnd = new NodeAstar();
-        int dEnd = 0;
-        int fEnd = matrix[endPos.column, endPos.row].estimateCost;
-        string actionEnd = "";
-        _endNodeAstar = new NodeAstar(parentEnd, startPos, dEnd, fEnd, actionEnd);
-
+        _startNodeAstar = matrix[startPos.column, startPos.row];
+        _endNodeAstar = matrix[endPos.column, endPos.row];
         _matrix = matrix;
-        _startPos = startPos;
-        _endPos = endPos;
+
+        CalculateEstimateCost(_matrix);
+        SetupPosInArray(_matrix);
     }
 
-    private int CalculateH_Value(int[,] matrix)
+    private void CalculateEstimateCost(NodeAstar[,] matrix)
     {
-        int hValue = 0;
-
         for (int i = 0; i < matrix.GetLength(0); i++)
         {
             for (int j = 0; j < matrix.GetLength(1); j++)
             {
-                if (matrix[i, j] != targetMatrix[i, j] && matrix[i, j] != 0)
-                {
-                    hValue++;
-                }
+                matrix[i,j].estimateCost = _endNodeAstar.posInArray.TotalBySubWithAbs(matrix[i, j].posInArray);
             }
         }
+    }
 
-        return hValue;
+    private void SetupPosInArray(NodeAstar[,] matrix)
+    {
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < matrix.GetLength(1); j++)
+            {
+                matrix[i, j].posInArray = new PosInArray(i, j);
+            }
+        }
     }
 
     private void Travelled(NodeAstar currentNode)
     {
-        if (currentNode.posInArray.Equals(_matrix[_endPos.column, _endPos.row].posInArray))
+        if (currentNode.posInArray.Equals(_endNodeAstar.posInArray))
         {
             return;
         }
 
         MoveNextNode(currentNode);
 
-        NodeAstar nextNodeAstar = _openList.Dequeue();
+        NodeAstar nextnodeAstar = _openList.Dequeue();
 
-        _closedList.Add(nextNodeAstar);
+        _closedList.Add(nextnodeAstar);
 
-        Travelled(nextNodeAstar);
+        Travelled(nextnodeAstar);
     }
 
     private void MoveNextNode(NodeAstar currentNode)
     {
-        int[,] matrix = CopyMatrix(currentNode.matrix);
-
-        int posValue = matrix[directPos.row, directPos.column];
-
-        // Di chuyen object
-        string action = "";
-        matrix[emptyPos.row, emptyPos.column] = posValue;
-        matrix[directPos.row, directPos.column] = 0;
-        action += "Move " + posValue + " " + GetDirectAction(emptyPos, directPos);
-
-        // Tính f
-        int g = currentNode.g + 1;
-        int f = CalculateH_Value(matrix) + g;
-
-        // Tạo NodeMaTran với object đã di chuyển
-        List<NodeAstar> childNodeThap = new List<NodeAstar>();
-        NodeAstar newNode = new NodeAstar(matrix, currentNode, childNodeThap, f, g, action);
-
-        // Kiểm tra xem đã có trong CloseList chưa
-        if (!IsNodeInClosedList(newNode) && !IsNodeInOpenedList(newNode))
+        for (int i = 0; i < currentNode.links.Count; i++)
         {
-            currentNode.childNodes.Add(newNode);
-
-            _openList.Enqueue(newNode, newNode.f);
+            NodeAstar nextNode = currentNode.links[i].nodeAstar;
+            if (!IsNodeInClosedList(nextNode) && !IsNodeInOpenedList(nextNode))
+            {
+                nextNode.parentNode = currentNode;
+                nextNode.d += currentNode.links[i].weight;
+                nextNode.f = nextNode.d + nextNode.estimateCost;
+                _openList.Enqueue(nextNode, nextNode.f);
+            }
         }
     }
 
     private bool IsNodeInClosedList(NodeAstar nodeToCheck)
     {
-        foreach (NodeAstar nodeMaTran in _closedList)
+        foreach (NodeAstar nodeAstar in _closedList)
         {
-            if (nodeToCheck.posInArray.Equals(nodeMaTran.posInArray))
+            if (nodeToCheck.posInArray.Equals(nodeAstar.posInArray))
             {
                 return true;
             }
@@ -198,20 +192,16 @@ class AStar
 
         GetRightWay(_closedList.Last());
 
-        int step = 1;
         foreach (NodeAstar nodeAstar in rightWay)
         {
-            if (nodeAstar.action.Equals("")) continue;
-
-            Console.WriteLine("Step " + step + ": " + nodeAstar.action);
-            step++;
+            Console.WriteLine("Move to (" + nodeAstar.posInArray.column + ", " + nodeAstar.posInArray.row + ")");
         }
     }
 
     private void GetRightWay(NodeAstar nodeAstar)
     {
         // Add node dich vao rightWay
-        if (nodeAstar.posInArray.Equals(_matrix[_endPos.column, _endPos.row].posInArray))
+        if (nodeAstar.posInArray.Equals(_endNodeAstar.posInArray))
         {
             rightWay.AddFirst(nodeAstar);
         }
@@ -223,38 +213,19 @@ class AStar
         GetRightWay(nodeAstar.parentNode);
     }
 
-    private static NodeMatran[,] SetupMatrixData()
+    private static NodeAstar[,] SetupMatrixData()
     {
         List<Link> links = new List<Link>();
-        int estimateCost = -1;
-        PosInArray pos;
 
-        pos = new PosInArray(0, 0);
-        NodeMatran node0_0 = new NodeMatran(links, estimateCost, pos);
-
-        pos = new PosInArray(0, 1);
-        NodeMatran node0_1 = new NodeMatran(links, estimateCost, pos);
-
-        pos = new PosInArray(0, 2);
-        NodeMatran node0_2 = new NodeMatran(links, estimateCost, pos);
-
-        pos = new PosInArray(1, 0);
-        NodeMatran node1_0 = new NodeMatran(links, estimateCost, pos);
-
-        pos = new PosInArray(1, 1);
-        NodeMatran node1_1 = new NodeMatran(links, estimateCost, pos);
-
-        pos = new PosInArray(1, 2);
-        NodeMatran node1_2 = new NodeMatran(links, estimateCost, pos);
-
-        pos = new PosInArray(2, 0);
-        NodeMatran node2_0 = new NodeMatran(links, estimateCost, pos);
-
-        pos = new PosInArray(2, 1);
-        NodeMatran node2_1 = new NodeMatran(links, estimateCost, pos);
-
-        pos = new PosInArray(2, 2);
-        NodeMatran node2_2 = new NodeMatran(links, estimateCost, pos);
+        NodeAstar node0_0 = new NodeAstar(links);
+        NodeAstar node0_1 = new NodeAstar(links);
+        NodeAstar node0_2 = new NodeAstar(links);
+        NodeAstar node1_0 = new NodeAstar(links);
+        NodeAstar node1_1 = new NodeAstar(links);
+        NodeAstar node1_2 = new NodeAstar(links);
+        NodeAstar node2_0 = new NodeAstar(links);
+        NodeAstar node2_1 = new NodeAstar(links);
+        NodeAstar node2_2 = new NodeAstar(links);
 
         node0_0.links.Add(new Link(node0_1, 2));
         node0_0.links.Add(new Link(node1_0, 5));
@@ -283,7 +254,7 @@ class AStar
 
         node2_2.links.Add(new Link(node2_1, 1));
 
-        NodeMatran[,] matrix =
+        NodeAstar[,] matrix =
         {
             {node0_0, node1_0, node2_0 },
             {node0_1, node1_1, node2_1 },
@@ -295,7 +266,7 @@ class AStar
 
     static void Main(string[] args)
     {
-        NodeMatran[,] matrix = SetupMatrixData();       
+        NodeAstar[,] matrix = SetupMatrixData();       
 
         PosInArray startPos = new PosInArray(0,0);
         PosInArray endPos = new PosInArray(2,2);
