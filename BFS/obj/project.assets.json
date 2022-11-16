@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\BuuKhanh\\.nuget\\packages\\": {}
+    "C:\\Users\\khanh.buidoanbuu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\BFS\\BFS.csproj",
+      "projectUniqueName": "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\BFS\\BFS.csproj",
       "projectName": "BFS",
-      "projectPath": "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\BFS\\BFS.csproj",
-      "packagesPath": "C:\\Users\\BuuKhanh\\.nuget\\packages\\",
-      "outputPath": "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\BFS\\obj\\",
+      "projectPath": "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\BFS\\BFS.csproj",
+      "packagesPath": "C:\\Users\\khanh.buidoanbuu\\.nuget\\packages\\",
+      "outputPath": "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\BFS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\BuuKhanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\khanh.buidoanbuu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,8 +51,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -61,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

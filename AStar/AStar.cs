@@ -7,16 +7,36 @@ class AStar
     {
         public List<Link> links;
         public int estimateCost;
-        public int trueCost;
         public PosInArray posInArray;
 
-        public NodeMatran(List<Link> afterNodes, int estimateCost, int trueCost, PosInArray posInArray)
+        public NodeMatran(List<Link> afterNodes, int estimateCost, PosInArray posInArray)
         {
             this.links = afterNodes;
             this.estimateCost = estimateCost;
-            this.trueCost = trueCost;
             this.posInArray = posInArray;
         }       
+    }
+
+    private class NodeAstar
+    {
+        public NodeAstar parentNode;
+        public PosInArray posInArray;
+        public int d;
+        public int f;
+        public string action;
+
+        public NodeAstar(NodeAstar parentNode, PosInArray posInArray, int d, int f, string action)
+        {
+            this.parentNode = parentNode;
+            this.posInArray = posInArray;
+            this.d = d;
+            this.f = f;
+            this.action = action;
+        }
+        public NodeAstar()
+        {
+
+        }
     }
 
     private class PosInArray
@@ -45,32 +65,31 @@ class AStar
 
     private PosInArray _startPos;
     private PosInArray _endPos;
+    private NodeAstar _startNodeAstar;
+    private NodeAstar _endNodeAstar;
     private NodeMatran[,] _matrix;
 
-    private PriorityQueue<NodeMatran, int> _openList = new PriorityQueue<NodeMatran, int>();
-    private List<NodeMatran> _closedList = new List<NodeMatran>();
-    private LinkedList<NodeMatran> rightWay = new LinkedList<NodeMatran>();
-
-    private int[,] targetMatrix = new int[3, 3];
+    private PriorityQueue<NodeAstar, int> _openList = new PriorityQueue<NodeAstar, int>();
+    private List<NodeAstar> _closedList = new List<NodeAstar>();
+    private LinkedList<NodeAstar> rightWay = new LinkedList<NodeAstar>();
 
     private AStar(NodeMatran[,] matrix, PosInArray startPos, PosInArray endPos)
     {
+        NodeAstar parentStart = new NodeAstar();
+        int dStart = 0;
+        int fStart = matrix[startPos.column, startPos.row].estimateCost;
+        string actionStart = "";
+        _startNodeAstar = new NodeAstar(parentStart, startPos, dStart, fStart, actionStart);
+
+        NodeAstar parentEnd = new NodeAstar();
+        int dEnd = 0;
+        int fEnd = matrix[endPos.column, endPos.row].estimateCost;
+        string actionEnd = "";
+        _endNodeAstar = new NodeAstar(parentEnd, startPos, dEnd, fEnd, actionEnd);
+
         _matrix = matrix;
         _startPos = startPos;
         _endPos = endPos;
-    }
-
-    private NodeMatran InitFirstNodeMaTran(int[,] firstMatrix)
-    {
-        int[,] matrix = CopyMatrix(firstMatrix);
-
-        List<NodeMatran> childNodeMaTran = new List<NodeMatran>();
-
-        NodeMatran nodeMaTran = new NodeMatran(matrix, null, childNodeMaTran, CalculateH_Value(matrix), 0, "");
-
-        _closedList.Add(nodeMaTran);
-
-        return nodeMaTran;
     }
 
     private int CalculateH_Value(int[,] matrix)
@@ -91,23 +110,23 @@ class AStar
         return hValue;
     }
 
-    private void Travelled(NodeMatran currentNode)
+    private void Travelled(NodeAstar currentNode)
     {
-        if (CalculateH_Value(currentNode.matrix) == 0)
+        if (currentNode.posInArray.Equals(_matrix[_endPos.column, _endPos.row].posInArray))
         {
             return;
         }
 
-        MoveMatrix(currentNode);
+        MoveNextNode(currentNode);
 
-        NodeMatran nextNodeMaTran = _openList.Dequeue();
+        NodeAstar nextNodeAstar = _openList.Dequeue();
 
-        _closedList.Add(nextNodeMaTran);
+        _closedList.Add(nextNodeAstar);
 
-        Travelled(nextNodeMaTran);
+        Travelled(nextNodeAstar);
     }
 
-    private void MoveMatrix(NodeMatran currentNode)
+    private void MoveNextNode(NodeAstar currentNode)
     {
         int[,] matrix = CopyMatrix(currentNode.matrix);
 
@@ -124,8 +143,8 @@ class AStar
         int f = CalculateH_Value(matrix) + g;
 
         // Tạo NodeMaTran với object đã di chuyển
-        List<NodeMatran> childNodeThap = new List<NodeMatran>();
-        NodeMatran newNode = new NodeMatran(matrix, currentNode, childNodeThap, f, g, action);
+        List<NodeAstar> childNodeThap = new List<NodeAstar>();
+        NodeAstar newNode = new NodeAstar(matrix, currentNode, childNodeThap, f, g, action);
 
         // Kiểm tra xem đã có trong CloseList chưa
         if (!IsNodeInClosedList(newNode) && !IsNodeInOpenedList(newNode))
@@ -136,9 +155,9 @@ class AStar
         }
     }
 
-    private bool IsNodeInClosedList(NodeMatran nodeToCheck)
+    private bool IsNodeInClosedList(NodeAstar nodeToCheck)
     {
-        foreach (NodeMatran nodeMaTran in _closedList)
+        foreach (NodeAstar nodeMaTran in _closedList)
         {
             if (nodeToCheck.posInArray.Equals(nodeMaTran.posInArray))
             {
@@ -149,17 +168,25 @@ class AStar
         return false;
     }
 
-    private bool IsNodeInOpenedList(NodeMatran nodeToCheck)
+    private bool IsNodeInOpenedList(NodeAstar nodeToCheck)
     {
-        List<NodeMatran> tempOpenedList = new List<NodeMatran>();
+        List<NodeAstar> tempOpenedList = new List<NodeAstar>();
 
         while (_openList.Count > 0)
         {
             tempOpenedList.Add(_openList.Dequeue());
         }
-        foreach (NodeMatran nodeMaTran in tempOpenedList)
+        foreach (NodeAstar nodeAstar in tempOpenedList)
         {
-            _openList.Enqueue(nodeMaTran, nodeMaTran.f);
+            _openList.Enqueue(nodeAstar, nodeAstar.f);
+        }
+
+        foreach (NodeAstar nodeAstar in tempOpenedList)
+        {
+            if (nodeToCheck.posInArray.Equals(nodeAstar.posInArray))
+            {
+                return true;
+            }
         }
 
         return false;
@@ -167,67 +194,67 @@ class AStar
 
     private void PrintAction()
     {
-        Travelled(_startNodeMatran);
+        Travelled(_startNodeAstar);
 
         GetRightWay(_closedList.Last());
 
         int step = 1;
-        foreach (NodeMatran nodeMaTran in rightWay)
+        foreach (NodeAstar nodeAstar in rightWay)
         {
-            if (nodeMaTran.action.Equals("")) continue;
+            if (nodeAstar.action.Equals("")) continue;
 
-            Console.WriteLine("Step " + step + ": " + nodeMaTran.action);
+            Console.WriteLine("Step " + step + ": " + nodeAstar.action);
             step++;
         }
     }
 
-    private void GetRightWay(NodeMatran nodeMaTran)
+    private void GetRightWay(NodeAstar nodeAstar)
     {
-        if (CalculateH_Value(nodeMaTran.matrix) == 0)
+        // Add node dich vao rightWay
+        if (nodeAstar.posInArray.Equals(_matrix[_endPos.column, _endPos.row].posInArray))
         {
-            rightWay.AddFirst(nodeMaTran);
+            rightWay.AddFirst(nodeAstar);
         }
 
-        if (nodeMaTran.parentNode == null) return;
+        if (nodeAstar.parentNode == null) return;
 
-        rightWay.AddFirst(nodeMaTran.parentNode);
+        rightWay.AddFirst(nodeAstar.parentNode);
 
-        GetRightWay(nodeMaTran.parentNode);
+        GetRightWay(nodeAstar.parentNode);
     }
 
     private static NodeMatran[,] SetupMatrixData()
     {
         List<Link> links = new List<Link>();
         int estimateCost = -1;
-        int trueCose = -1;
         PosInArray pos;
 
         pos = new PosInArray(0, 0);
-        NodeMatran node0_0 = new NodeMatran(links, estimateCost, trueCose, pos);
+        NodeMatran node0_0 = new NodeMatran(links, estimateCost, pos);
 
         pos = new PosInArray(0, 1);
-        NodeMatran node0_1 = new NodeMatran(links, estimateCost, trueCose, pos);
+        NodeMatran node0_1 = new NodeMatran(links, estimateCost, pos);
 
         pos = new PosInArray(0, 2);
-        NodeMatran node0_2 = new NodeMatran(links, estimateCost, trueCose, pos);
+        NodeMatran node0_2 = new NodeMatran(links, estimateCost, pos);
 
         pos = new PosInArray(1, 0);
-        NodeMatran node1_0 = new NodeMatran(links, estimateCost, trueCose, pos);
+        NodeMatran node1_0 = new NodeMatran(links, estimateCost, pos);
 
         pos = new PosInArray(1, 1);
-        NodeMatran node1_1 = new NodeMatran(links, estimateCost, trueCose, pos);
+        NodeMatran node1_1 = new NodeMatran(links, estimateCost, pos);
 
         pos = new PosInArray(1, 2);
-        NodeMatran node1_2 = new NodeMatran(links, estimateCost, trueCose, pos);
+        NodeMatran node1_2 = new NodeMatran(links, estimateCost, pos);
 
         pos = new PosInArray(2, 0);
-        NodeMatran node2_0 = new NodeMatran(links, estimateCost, trueCose, pos);
+        NodeMatran node2_0 = new NodeMatran(links, estimateCost, pos);
 
         pos = new PosInArray(2, 1);
-        NodeMatran node2_1 = new NodeMatran(links, estimateCost, trueCose, pos);
+        NodeMatran node2_1 = new NodeMatran(links, estimateCost, pos);
 
         pos = new PosInArray(2, 2);
-        NodeMatran node2_2 = new NodeMatran(links, estimateCost, trueCose, pos);
+        NodeMatran node2_2 = new NodeMatran(links, estimateCost, pos);
 
         node0_0.links.Add(new Link(node0_1, 2));
         node0_0.links.Add(new Link(node1_0, 5));
