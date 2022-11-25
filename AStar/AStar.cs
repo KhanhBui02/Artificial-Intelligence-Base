@@ -264,6 +264,57 @@ class AStar
         return matrix;
     }
 
+    private static NodeAstar[,] SetupMatrixData_2()
+    {
+        List<Link> links = new List<Link>();
+
+        NodeAstar node0_0 = new NodeAstar(links);
+        NodeAstar node0_1 = new NodeAstar(links);
+        NodeAstar node0_2 = new NodeAstar(links);
+        NodeAstar node1_0 = new NodeAstar(links);
+        NodeAstar node1_1 = new NodeAstar(links);
+        NodeAstar node1_2 = new NodeAstar(links);
+        NodeAstar node2_0 = new NodeAstar(links);
+        NodeAstar node2_1 = new NodeAstar(links);
+        NodeAstar node2_2 = new NodeAstar(links);
+
+        node0_0.links.Add(new Link(node0_1, 2));
+        node0_0.links.Add(new Link(node1_0, 2));
+
+        node0_1.links.Add(new Link(node1_1, 1));
+
+        node0_2.links.Add(new Link(node1_1, 2));
+        node0_2.links.Add(new Link(node1_2, 2));
+
+        node1_0.links.Add(new Link(node0_0, 3));
+        node1_0.links.Add(new Link(node1_1, 2));
+
+        node1_1.links.Add(new Link(node0_1, 1));
+        node1_1.links.Add(new Link(node0_2, 2));
+        node1_1.links.Add(new Link(node2_1, 6));
+
+        node1_2.links.Add(new Link(node0_2, 2));
+        node1_2.links.Add(new Link(node2_2, 2));
+
+        node2_0.links.Add(new Link(node2_1, 2));
+
+        node2_1.links.Add(new Link(node2_0, 2));
+        node2_1.links.Add(new Link(node1_1, 6));
+        node2_1.links.Add(new Link(node2_2, 1));
+
+        node2_2.links.Add(new Link(node1_2, 2));
+        node2_2.links.Add(new Link(node2_1, 1));
+
+        NodeAstar[,] matrix =
+        {
+            {node0_0, node1_0, node2_0 },
+            {node0_1, node1_1, node2_1 },
+            {node0_2, node1_2, node2_2 },
+        };
+
+        return matrix;
+    }
+
     static void Main(string[] args)
     {
         NodeAstar[,] matrix = SetupMatrixData();       

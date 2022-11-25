@@ -13,3 +13,18 @@ D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\n
 D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.pdb
 D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.genruntimeconfig.cache
 D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\ThapHaNoiAKT\obj\Debug\net6.0\ref\ThapHaNoiAKT.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\bin\Debug\net6.0\ThapHaNoiAKT.exe
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\bin\Debug\net6.0\ThapHaNoiAKT.deps.json
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\bin\Debug\net6.0\ThapHaNoiAKT.runtimeconfig.json
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\bin\Debug\net6.0\ThapHaNoiAKT.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\bin\Debug\net6.0\ThapHaNoiAKT.pdb
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.csproj.AssemblyReference.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.GeneratedMSBuildEditorConfig.editorconfig
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.AssemblyInfoInputs.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.AssemblyInfo.cs
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.csproj.CoreCompileInputs.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\obj\Debug\net6.0\refint\ThapHaNoiAKT.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.pdb
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\obj\Debug\net6.0\ThapHaNoiAKT.genruntimeconfig.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\ThapHaNoiAKT\obj\Debug\net6.0\ref\ThapHaNoiAKT.dll

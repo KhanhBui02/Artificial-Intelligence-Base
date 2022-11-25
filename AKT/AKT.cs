@@ -348,7 +348,7 @@ class AKT
             { 7, 6, 5 }
         };
 
-        AKT thn = new AKT(startMatrix2);
+        AKT thn = new AKT(startMatrix);
         thn.PrintAction();
     }
 }

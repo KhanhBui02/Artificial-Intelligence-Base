@@ -13,3 +13,18 @@ D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AKT\obj\Debug\net6.0\ref
 D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AKT\obj\Debug\net6.0\AKT.pdb
 D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AKT\obj\Debug\net6.0\AKT.genruntimeconfig.cache
 D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AKT\obj\Debug\net6.0\ref\AKT.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\bin\Debug\net6.0\AKT.exe
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\bin\Debug\net6.0\AKT.deps.json
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\bin\Debug\net6.0\AKT.runtimeconfig.json
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\bin\Debug\net6.0\AKT.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\bin\Debug\net6.0\AKT.pdb
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\obj\Debug\net6.0\AKT.csproj.AssemblyReference.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\obj\Debug\net6.0\AKT.GeneratedMSBuildEditorConfig.editorconfig
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\obj\Debug\net6.0\AKT.AssemblyInfoInputs.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\obj\Debug\net6.0\AKT.AssemblyInfo.cs
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\obj\Debug\net6.0\AKT.csproj.CoreCompileInputs.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\obj\Debug\net6.0\AKT.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\obj\Debug\net6.0\refint\AKT.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\obj\Debug\net6.0\AKT.pdb
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\obj\Debug\net6.0\AKT.genruntimeconfig.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AKT\obj\Debug\net6.0\ref\AKT.dll

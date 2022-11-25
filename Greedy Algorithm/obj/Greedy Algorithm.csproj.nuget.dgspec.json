@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\Greedy Algorithm\\Greedy Algorithm.csproj": {}
+    "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\Greedy Algorithm\\Greedy Algorithm.csproj": {}
   },
   "projects": {
-    "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\Greedy Algorithm\\Greedy Algorithm.csproj": {
+    "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\Greedy Algorithm\\Greedy Algorithm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\Greedy Algorithm\\Greedy Algorithm.csproj",
+        "projectUniqueName": "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\Greedy Algorithm\\Greedy Algorithm.csproj",
         "projectName": "Greedy Algorithm",
-        "projectPath": "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\Greedy Algorithm\\Greedy Algorithm.csproj",
-        "packagesPath": "C:\\Users\\BuuKhanh\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Năm 3\\Cơ sở trí tuệ nhân tạo\\Code\\AI\\Greedy Algorithm\\obj\\",
+        "projectPath": "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\Greedy Algorithm\\Greedy Algorithm.csproj",
+        "packagesPath": "C:\\Users\\khanh.buidoanbuu\\.nuget\\packages\\",
+        "outputPath": "D:\\khanh.buidoanbuu\\Exercise\\Artificial-Intelligence-Base\\Greedy Algorithm\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\BuuKhanh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\khanh.buidoanbuu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -45,8 +45,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -55,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
