@@ -85,9 +85,6 @@ namespace Graph_Coloring
 
         public bool IsNeighbour(LinkedList<int> neighbours, int vertice)
         {
-            int[] neighboursTemp = new int[neighbours.Count];
-            neighbours.CopyTo(neighboursTemp, 0);
-
             foreach (int nbIndex in neighbours)
             {
                 if (vertice == nbIndex)
@@ -108,8 +105,8 @@ namespace Graph_Coloring
             {
                 if (vertices[i].color == 0)
                 {
-                    LinkedList<int> neighbours = _adj[vertices[i].vertice];
                     vertices[i].color = color;
+                    LinkedList<int> neighbours = _adj[vertices[i].vertice];
 
                     for (int j = i + 1; j < vertices.Length; j++)
                     {
@@ -194,8 +191,6 @@ namespace Graph_Coloring
 
             g.AddEdge(10, 7);
             g.AddEdge(10, 8);
-
-            Console.Write("Following is Breadth First Traversal(starting from vertex 2)\n");
 
             g.GreedyColoring();
 

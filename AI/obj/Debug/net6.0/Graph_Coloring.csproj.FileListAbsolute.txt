@@ -13,3 +13,18 @@ D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\refi
 D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\Graph_Coloring.pdb
 D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\Graph_Coloring.genruntimeconfig.cache
 D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\AI\obj\Debug\net6.0\ref\Graph_Coloring.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\bin\Debug\net6.0\Graph_Coloring.exe
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\bin\Debug\net6.0\Graph_Coloring.deps.json
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\bin\Debug\net6.0\Graph_Coloring.runtimeconfig.json
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\bin\Debug\net6.0\Graph_Coloring.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\bin\Debug\net6.0\Graph_Coloring.pdb
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\obj\Debug\net6.0\Graph_Coloring.csproj.AssemblyReference.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\obj\Debug\net6.0\Graph_Coloring.GeneratedMSBuildEditorConfig.editorconfig
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\obj\Debug\net6.0\Graph_Coloring.AssemblyInfoInputs.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\obj\Debug\net6.0\Graph_Coloring.AssemblyInfo.cs
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\obj\Debug\net6.0\Graph_Coloring.csproj.CoreCompileInputs.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\obj\Debug\net6.0\Graph_Coloring.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\obj\Debug\net6.0\refint\Graph_Coloring.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\obj\Debug\net6.0\Graph_Coloring.pdb
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\obj\Debug\net6.0\Graph_Coloring.genruntimeconfig.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\AI\obj\Debug\net6.0\ref\Graph_Coloring.dll

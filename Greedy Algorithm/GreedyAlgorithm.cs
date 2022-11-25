@@ -39,7 +39,7 @@ class GreedyAlgorithm
                 tempTongTien -= menhGia[i];
             }
 
-            if (toTien.soToTien != 0)
+            if (toTien.soToTien > 0)
             {
                 _toTienList.AddLast(toTien);
             }

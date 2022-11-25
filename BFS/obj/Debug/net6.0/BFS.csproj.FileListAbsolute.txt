@@ -13,3 +13,18 @@ D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\ref
 D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\BFS.pdb
 D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\BFS.genruntimeconfig.cache
 D:\Study\Năm 3\Cơ sở trí tuệ nhân tạo\Code\AI\BFS\obj\Debug\net6.0\ref\BFS.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\bin\Debug\net6.0\BFS.exe
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\bin\Debug\net6.0\BFS.deps.json
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\bin\Debug\net6.0\BFS.runtimeconfig.json
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\bin\Debug\net6.0\BFS.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\bin\Debug\net6.0\BFS.pdb
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\obj\Debug\net6.0\BFS.csproj.AssemblyReference.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\obj\Debug\net6.0\BFS.GeneratedMSBuildEditorConfig.editorconfig
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\obj\Debug\net6.0\BFS.AssemblyInfoInputs.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\obj\Debug\net6.0\BFS.AssemblyInfo.cs
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\obj\Debug\net6.0\BFS.csproj.CoreCompileInputs.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\obj\Debug\net6.0\BFS.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\obj\Debug\net6.0\refint\BFS.dll
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\obj\Debug\net6.0\BFS.pdb
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\obj\Debug\net6.0\BFS.genruntimeconfig.cache
+D:\khanh.buidoanbuu\Exercise\Artificial-Intelligence-Base\BFS\obj\Debug\net6.0\ref\BFS.dll
